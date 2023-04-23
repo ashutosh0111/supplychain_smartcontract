@@ -1,0 +1,884 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "ConsumerAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "ConsumerRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "DistributorAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "DistributorRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "ForSaleByDistributor",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "ForSaleByManufacturer",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "ForSaleByRetailer",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "ForSaleByWholesaler",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "ManufacturerAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "ManufacturerRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "ProcessedByDistributor",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "ProcessedByRetailer",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "ProcessedByWholesaler",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "ProducedByManufacturer",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "PurchasedByConsumer",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "PurchasedByDistributor",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "PurchasedByRetailer",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "PurchasedByWholesaler",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "ReceivedByDistributor",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "ReceivedByRetailer",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "ReceivedByWholesaler",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "RetailerAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "RetailerRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "ShippedByDistributor",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "ShippedByManufacturer",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "ShippedByWholesaler",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "WholesalerAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "WholesalerRemoved",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_productCode",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_productInfo",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					}
+				],
+				"name": "ProduceItemByManufacturer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "addConsumer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "addDistributor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "addManufacturer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "addRetailer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "addWholesaler",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "isConsumer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "isDistributor",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "isManufacturer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "isRetailer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "isWholesaler",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "kill",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_productCode",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "slices",
+						"type": "uint256"
+					}
+				],
+				"name": "processedItemByDistributor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_productCode",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "slices",
+						"type": "uint256"
+					}
+				],
+				"name": "processedItemByWholesaler",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "purchaseItemByDistributor",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "purchaseItemByRetailer",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "purchaseItemByWholesaler",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "receivedItemByDistributor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "receivedItemByWholesalerr",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renouceConsumer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renouceDistributor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renouceManufaturer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renouceRetailer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renouceWholesaler",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_productCode",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					}
+				],
+				"name": "sellItemByDistributor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_productCode",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					}
+				],
+				"name": "sellItemByFarmer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_productCode",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					}
+				],
+				"name": "sellItemByWholesaler",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "shippedItemByDistributor",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_productCode",
+						"type": "uint256"
+					}
+				],
+				"name": "shippedItemByManufacturer",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Contracts/Supplychain/Supplychain1.sol": "Supplychain1"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Contracts/Access/Consumer.sol": {
+			"keccak256": "0x5724ee1527507c6d98ea2a0b78ee6cf7d6de99f20dada2cfbed838f92a5ece8e",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://926738e9679bafdedbaf6637805874d8cb99218b85d58fa7bf41c2016f89e70c",
+				"dweb:/ipfs/QmWUe1bJXTgNW6A77CLwgcbLJ6LYwPeRwoBLDUgpx3V5H3"
+			]
+		},
+		"Contracts/Access/Distributor.sol": {
+			"keccak256": "0x4a15ed51c61286f01d514d8e1ce6fe0bd3cb692af15468b76aad92c8c982219e",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://fd78e4f22092c04661565b9fa3ae3ae49ea06953a0eac37f434bef0155151ec1",
+				"dweb:/ipfs/QmPHcJdbGdCmK4Zsei8BL3X21PoBUxKE4Diz75uoVsVzqA"
+			]
+		},
+		"Contracts/Access/Manufacturer.sol": {
+			"keccak256": "0xcd325877b25b1f0709c8e9ce4a15d676378853007c822e468474ad56a0f18cb2",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://909a0fb8a0ac7da051c72aed79b9ce2d2e227af6c903a82c51834d35589c4b8c",
+				"dweb:/ipfs/QmUKhzHCASu3pfHYf2hFpDUYXPUSt7sX78uiEjZEtAdG3m"
+			]
+		},
+		"Contracts/Access/Retailer.sol": {
+			"keccak256": "0x16ccbc0471e98199237ff831b7b1dba9ca704284c919a6443aea7c73c86fe43a",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://b8b0e7fa7f6d6482c3e0b09a90a0ddafad7638fa132a0f83edd909dcef2a6272",
+				"dweb:/ipfs/QmTVEpkbya8MJAbTWXrZvpunTk7LUKaiha1onFVF1uhTEC"
+			]
+		},
+		"Contracts/Access/Roles.sol": {
+			"keccak256": "0xdfd92f0594fd9047291cd7f41db788ef52aa8ea6f2495f7412845d78ea970641",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://e44051bb42e54a20e11fb5c0fa07e0c15a7c806b06b489ce5e3c1af6daa0c260",
+				"dweb:/ipfs/QmRW9BZW9EpFW4Y7eWLdC7U8ukBKbWHjWjcLCDsghnLrA9"
+			]
+		},
+		"Contracts/Access/Wholesaler.sol": {
+			"keccak256": "0x9c4758ee15c31b080aa0eefcdf628c7970080be779ffa1f4ba13c353fa23535d",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://c247298be76b282958c9825d76c29dc632899648cb92ea6438fd0ca92ce10d6a",
+				"dweb:/ipfs/QmdBrScFREApEyJP2YE7BQWCdqz82wRkZLmqrfQdMcBqmv"
+			]
+		},
+		"Contracts/Ownership/Ownable.sol": {
+			"keccak256": "0x8340426bd551580aba63338b8ebf6661a268d788ce2b8d7ac418c4a63d538b51",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://04682bbe74917084e7953c5c15dd9fc27b37742ce4a429212b803387b99f82b4",
+				"dweb:/ipfs/QmTj8EXvvdfp6E5PBv5pze4BD3Hx7HTD4nLP4MNwJSkDwP"
+			]
+		},
+		"Contracts/Supplychain/Supplychain1.sol": {
+			"keccak256": "0x98cdfb44bc189cbce80e3a4a8e8a396fabe41d5b394c533f10a8230b670f7749",
+			"urls": [
+				"bzz-raw://7f64d4a7320f2bec0d0e32c77a27a4c9ccd76b03f9832dc326abb66ced96b307",
+				"dweb:/ipfs/QmbMqXACQBA7ij3dQajC3KZUGYMXHWhbcjd7xtfEmBUj14"
+			]
+		},
+		"Contracts/Utils/Context.sol": {
+			"keccak256": "0x14bbb82de469aa63467643df4a6f7f7f9a63b20cf9203e43d03cc045feee10bc",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://2db2eb137fb655aa14d42d25b5d808c8758931ac1917d3b97a2428af43a3858a",
+				"dweb:/ipfs/QmQRVrrmrDeAgYHZSict5VfDyEdmgCGQZWbS68N7aTCZ8D"
+			]
+		}
+	},
+	"version": 1
+}

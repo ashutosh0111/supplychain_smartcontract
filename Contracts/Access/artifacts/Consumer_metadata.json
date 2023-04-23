@@ -1,0 +1,132 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "ConsumerAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "ConsumerRemoved",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "addConsumer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "isConsumer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renouceConsumer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Contracts/Access/Consumer.sol": "Consumer"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Contracts/Access/Consumer.sol": {
+			"keccak256": "0x5724ee1527507c6d98ea2a0b78ee6cf7d6de99f20dada2cfbed838f92a5ece8e",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://926738e9679bafdedbaf6637805874d8cb99218b85d58fa7bf41c2016f89e70c",
+				"dweb:/ipfs/QmWUe1bJXTgNW6A77CLwgcbLJ6LYwPeRwoBLDUgpx3V5H3"
+			]
+		},
+		"Contracts/Access/Roles.sol": {
+			"keccak256": "0xdfd92f0594fd9047291cd7f41db788ef52aa8ea6f2495f7412845d78ea970641",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://e44051bb42e54a20e11fb5c0fa07e0c15a7c806b06b489ce5e3c1af6daa0c260",
+				"dweb:/ipfs/QmRW9BZW9EpFW4Y7eWLdC7U8ukBKbWHjWjcLCDsghnLrA9"
+			]
+		},
+		"Contracts/Utils/Context.sol": {
+			"keccak256": "0x34749fd4e06e5922f373753c49efaee4404ff717d9a4c570725352901b10ec78",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://8a3a68e3788b4d9e8a148e7e8dd10dd4154d0be0a9e0acb67803d9b99a3b730e",
+				"dweb:/ipfs/QmR7uVeH35ijykVCgiWT57KkiLkvs2P6ScovMSmYBX6QUf"
+			]
+		}
+	},
+	"version": 1
+}
