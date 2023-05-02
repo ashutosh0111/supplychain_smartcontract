@@ -11,12 +11,13 @@ import "../Access/Consumer.sol";
   contract Supplychain is 
     Manufacturer , 
     Distributor,
-    Wholesaler, 
+    Wholesaler,
     Retailer, 
     Consumer {
     address owner ;
     uint256 MedicineCode ;
     uint256 StockUnit ; 
+    // Somethign somrne
     mapping( uint256 => Medicine ) medicines ;
     mapping( uint256 => Txblocks) medicinesHistory;
     enum state{
